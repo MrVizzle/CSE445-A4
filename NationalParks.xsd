@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xsi:noNamespaceSchemaLocation="https://mrvizzle.github.io/CSE445-A4/NationalParks.xsd">
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:element name="NationalParks">
     <xs:complexType>
@@ -30,33 +28,5 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xsd:element name="NationalParks" type="NationalParksType"/>
 
 </xs:schema>
-  <xsd:complexType name="NationalParksType">
-    <xsd:sequence>
-      <xsd:element name="NationalPark" type="NationalParkType" minOccurs="1" maxOccurs="unbounded"/>
-    </xsd:sequence>
-  </xsd:complexType>
-
-  <xsd:complexType name="NationalParkType">
-    <xsd:sequence>
-      <xsd:element name="Name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="Phone" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
-      <xsd:element name="Address" type="AddressType" minOccurs="1" maxOccurs="1"/>
-    </xsd:sequence>
-    <xsd:attribute name="Rating" type="xsd:decimal" use="optional"/>
-  </xsd:complexType>
-
-  <xsd:complexType name="AddressType">
-    <xsd:sequence>
-      <xsd:element name="Number" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="Street" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="City" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="State" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="Zip" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-    </xsd:sequence>
-    <xsd:attribute name="NearestAirport" type="xsd:string" use="required"/>
-  </xsd:complexType>
-
-</xsd:schema>
